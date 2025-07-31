@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
 import Projects from "./scenes/Projects";
-import Experience from "./scenes/Skills";
+import Skills from "./scenes/Skills";
 import Education from "./scenes/Education";
 import Footer from "./scenes/Footer";
+import Experience from "./scenes/Experience";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -29,6 +30,7 @@ function App() {
       <Landing setSelectedPage={setSelectedPage} />
       <Projects />
       <Experience />
+      <Skills />
       <Education />
       <Footer />
     </div>

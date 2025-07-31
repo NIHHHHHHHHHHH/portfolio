@@ -107,12 +107,17 @@ const Navbar = ({ setSelectedPage }) => {
                                 page="Projects"
                                 setSelectedPage={setSelectedPage}
                             />
-                            <Link
-                                page="Education"
+                             <Link
+                                page="Experience"
                                 setSelectedPage={setSelectedPage}
                             />
+                          
                             <Link
                                 page="Skills"
+                                setSelectedPage={setSelectedPage}
+                            />
+                              <Link
+                                page="Education"
                                 setSelectedPage={setSelectedPage}
                             />
                             <a 

@@ -31,6 +31,7 @@ const Skills = () => {
                 <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-helvetica tracking-wide text-yellow-300 mb-4">
                     SKILLS
                 </p>
+                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-transparent"></div>
                 
             </motion.div>
 
