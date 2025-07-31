@@ -65,7 +65,7 @@ const Education = () => {
                                     {/* Duration Badge */}
                                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-yellow-300 bg-opacity-20 border border-yellow-300 border-opacity-30 mb-4">
                                         <span className="text-xs sm:text-sm font-helvetica tracking-wide text-yellow-300">
-                                            2021 — 2024
+                                            2020 — 2024
                                         </span>
                                     </div>
                                 </div>
