@@ -29,7 +29,7 @@ const cards = [
       "Deployed production-ready full stack using Vercel (frontend + backend), MongoDB Atlas, and engineered robust backend with Node.js, Express, and Multer"
     ],
     tools: "React.js • Tailwind CSS • Nodejs • Gemini Ai • Cloudinary • Vercel",
-    link: "https://ecocharge-18a51.web.app/",
+    link: "https://smart-search-m7v6-frontend.vercel.app/",
     id: 2,
     color: "text-gray-300",
     shadow: "yes",
