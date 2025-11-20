@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import logo from "../assets/logo.png";
-import resume from "../assets/My Resume.pdf";
+import resume from "../assets/ResumewithPiic.pdf";
 import HamburgerButton from "../components/HamburgerButton";
 
 const Link = ({ page, setSelectedPage, onClick, isMobile = false }) => {

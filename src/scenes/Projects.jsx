@@ -1,221 +1,3 @@
-// import { motion } from "framer-motion";
-
-// const cards = [
-//   {
-//     url: require("../assets/balihans.png"),
-//     title: "BALIHANS",
-//     description:
-//       "Full-stack MERN web app hosted on Google Cloud Run. Features optimized media handling via Cloudinary, responsive UI, and seamless performance across devices.",
-//     tools: "React.js • Tailwind CSS • Node.js • Express.js • MongoDB • GCP • Cloudinary",
-//     link: "https://balihans.com/",
-//     id: 1,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-//   {
-//     url: require("../assets/evolt.png"),
-//     title: "EVOLT",
-//     description:
-//       "Modern web app built with React and Tailwind, integrated with Firebase for real-time data and secure auth. Fully responsive with smooth user interactions.",
-//     tools: "React.js • Tailwind CSS • Firebase (Auth, Realtime DB, Hosting)",
-//     link: "https://ecocharge-18a51.web.app/",
-//     id: 2,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-//   {
-//     url: require("../assets/artistly.png"),
-//     title: "Artistly",
-//     description:
-//       "Next.js portfolio platform with dynamic filters, dark mode, animation, and responsive design. Built with best practices and deployed on Vercel.",
-//     tools:
-//       "Next.js (App Router) • Tailwind CSS • Framer Motion • React Hook Form • Vercel",
-//     link: "https://aartisttly.vercel.app/",
-//     id: 3,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-// ];
-
-// const Projects = () => {
-//   return (
-//     <section id="projects" className="relative">
-//       <div className="px-5 md:px-10 lg:px-20 max-w-7xl mx-auto">
-//         <div className="flex items-center justify-start my-14">
-//           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-helvetica tracking-wide z-10 text-left text-yellow-300">
-//             PROJECTS
-//           </p>
-//         </div>
-
-//         <div className="space-y-8 md:space-y-12">
-//           {cards.map((card, index) => (
-//             <motion.div
-//               key={card.id}
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true, margin: "-100px" }}
-//               transition={{ duration: 0.6, delay: index * 0.2 }}
-//               className="w-full max-w-4xl mx-auto"
-//             >
-//               <a href={card.link} target="_blank" rel="noopener noreferrer">
-//                 <motion.div
-//                   whileHover={{ scale: 1.02 }}
-//                   transition={{ duration: 0.3 }}
-//                   className="group relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] bg-cover bg-center rounded-t-md overflow-hidden"
-//                   style={{ backgroundImage: `url(${card.url})` }}
-//                 >
-//                   <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
-//                   <p className={`absolute top-0 left-0 bg-black bg-opacity-80 text-white font-helvetica tracking-wide text-sm md:text-base lg:text-lg ${card.color} p-4 md:p-6`}>
-//                     {card.title}
-//                   </p>
-//                 </motion.div>
-//               </a>
-              
-//               <div className="p-4 md:p-6 lg:p-8 bg-black rounded-b-md shadow-lg">
-//                 <p
-//                   className={`font-helvetica tracking-wide text-xs md:text-sm lg:text-base opacity-75 ${card.color} mb-4`}
-//                   dangerouslySetInnerHTML={{ __html: card.tools.replace(/\s/g, '&nbsp;') }}
-//                 ></p>
-//                 <p
-//                   className={`font-helvetica tracking-wide text-sm md:text-base lg:text-lg leading-relaxed ${card.color} ${card.shadow === 'yes' ? 'text-shadow-md' : ''}`}
-//                 >
-//                   {card.description}
-//                 </p>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Projects;
-
-// import { motion } from "framer-motion";
-// import { useState } from "react";
-
-// const cards = [
-//   {
-//      url: require("../assets/balihans.png"),
-//     title: "BALIHANS",
-//     description:
-//       "Full-stack MERN web app hosted on Google Cloud Run. Features optimized media handling via Cloudinary, responsive UI, and seamless performance across devices.",
-//     tools: "React.js • Tailwind CSS • Node.js • Express.js • MongoDB • GCP • Cloudinary",
-//     link: "https://balihans.com/",
-//     id: 1,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-//   {
-//      url: require("../assets/evolt.png"),
-//     title: "EVOLT",
-//     description:
-//       "Modern web app built with React and Tailwind, integrated with Firebase for real-time data and secure auth. Fully responsive with smooth user interactions.",
-//     tools: "React.js • Tailwind CSS • Firebase (Auth, Realtime DB, Hosting)",
-//     link: "https://ecocharge-18a51.web.app/",
-//     id: 2,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-//   {
-//    url: require("../assets/artistly.png"),
-//     title: "Artistly",
-//     description:
-//       "Next.js portfolio platform with dynamic filters, dark mode, animation, and responsive design. Built with best practices and deployed on Vercel.",
-//     tools:
-//       "Next.js (App Router) • Tailwind CSS • Framer Motion • React Hook Form • Vercel",
-//     link: "https://aartisttly.vercel.app/",
-//     id: 3,
-//     color: "text-gray-300",
-//     shadow: "yes",
-//   },
-// ];
-
-// const Projects = () => {
-//   const [selectedProject, setSelectedProject] = useState(0);
-
-//   return (
-//     <section id="projects" className="relative">
-//       <div className="px-5 md:px-10 lg:px-20 max-w-7xl mx-auto">
-//         {/* Section Header */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 30 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true, margin: "-100px" }}
-//           transition={{ duration: 0.6 }}
-//           className="text-left mb-12 md:mb-16 lg:mb-20"
-//         >
-//           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-helvetica tracking-wide text-yellow-300 mb-4">
-//             PROJECTS
-//           </p>
-//         </motion.div>
-
-//         {/* Navigation Buttons */}
-//         <div className="flex justify-center mb-8">
-//           <div className="flex gap-2 bg-black bg-opacity-30 backdrop-blur-sm rounded-lg p-2 border border-gray-700">
-//             {cards.map((card, index) => (
-//               <button
-//                 key={card.id}
-//                 onClick={() => setSelectedProject(index)}
-//                 className={`px-4 py-2 rounded-md text-sm font-helvetica tracking-wide transition-all duration-300 ${
-//                   selectedProject === index 
-//                     ? 'bg-yellow-300 text-black' 
-//                     : 'text-gray-300 hover:text-yellow-300 hover:bg-gray-700'
-//                 }`}
-//               >
-//                 {card.title}
-//               </button>
-//             ))}
-//           </div>
-//         </div>
-
-//         {/* Single Project Display */}
-//         <div className="w-full max-w-4xl mx-auto">
-//           <motion.div
-//             key={selectedProject}
-//             initial={{ opacity: 0, y: 50 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.6 }}
-//           >
-//             <a href={cards[selectedProject].link} target="_blank" rel="noopener noreferrer">
-//               <motion.div
-//                 whileHover={{ scale: 1.02 }}
-//                 transition={{ duration: 0.3 }}
-//                 className="group relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] bg-cover bg-center rounded-t-md overflow-hidden"
-//                 style={{ backgroundImage: `url(${cards[selectedProject].url})` }}
-//               >
-//                 <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
-//                 <p className={`absolute top-0 left-0 bg-black bg-opacity-80 text-white font-helvetica tracking-wide text-sm md:text-base lg:text-lg ${cards[selectedProject].color} p-4 md:p-6`}>
-//                   {cards[selectedProject].title}
-//                 </p>
-//               </motion.div>
-//             </a>
-                           
-//             <div className="p-4 md:p-6 lg:p-8 bg-black rounded-b-md shadow-lg">
-//               <p
-//                 className={`font-helvetica tracking-wide text-xs md:text-sm lg:text-base opacity-75 ${cards[selectedProject].color} mb-4`}
-//                 dangerouslySetInnerHTML={{ __html: cards[selectedProject].tools.replace(/\s/g, '&nbsp;') }}
-//               ></p>
-//               <p
-//                 className={`font-helvetica tracking-wide text-sm md:text-base lg:text-lg leading-relaxed ${cards[selectedProject].color} ${cards[selectedProject].shadow === 'yes' ? 'text-shadow-md' : ''}`}
-//               >
-//                 {cards[selectedProject].description}
-//               </p>
-//             </div>
-//           </motion.div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Projects;
-
-
-
-
-
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -223,8 +5,12 @@ const cards = [
   {
     url: require("../assets/balihans.png"),
     title: "BALIHANS",
-    description:
-      "Full-stack MERN web app hosted on Google Cloud Run. Features optimized media handling via Cloudinary, responsive UI, and seamless performance across devices.",
+    description: [
+      "Developed and deployed a responsive full-stack web application using the MERN stack (MongoDB, Express.js, React, Node.js)",
+      "Integrated Cloudinary for scalable media hosting and optimized image delivery, improving load times by 40%",
+      "Hosted applications on Google Cloud Platform (Cloud Run) for both frontend and backend, ensuring 99.9% uptime",
+      "Delivered a mobile-first, performance-optimized website with clean, maintainable code following industry best practices"
+    ],
     tools: "React.js • Tailwind CSS • Node.js • Express.js • MongoDB • GCP • Cloudinary",
     link: "https://balihans.com/",
     id: 1,
@@ -234,11 +20,15 @@ const cards = [
     gradient: "from-blue-600/20 to-purple-600/20"
   },
   {
-    url: require("../assets/evolt.png"),
-    title: "EVOLT",
-    description:
-      "Modern web app built with React and Tailwind, integrated with Firebase for real-time data and secure auth. Fully responsive with smooth user interactions.",
-    tools: "React.js • Tailwind CSS • Firebase (Auth, Realtime DB, Hosting)",
+    url: require("../assets/smartsearch.png"),
+    title: "Smart Search ",
+    description: [
+      "Developed an AI-powered internal search system with hybrid search logic combining keyword matching (60%) and semantic similarity (40%) using Gemini embeddings for highly relevant results",
+      "Built intelligent auto-categorization pipeline using Gemini AI and enabled multi-format ingestion with text extraction for PDF, DOCX, TXT, and Markdown files",
+      "Integrated Cloudinary for scalable CDN-optimized file storage and designed a fast, responsive UI with advanced filters and real-time upload feedback (5-15 seconds)",
+      "Deployed production-ready full stack using Vercel (frontend + backend), MongoDB Atlas, and engineered robust backend with Node.js, Express, and Multer"
+    ],
+    tools: "React.js • Tailwind CSS • Nodejs • Gemini Ai • Cloudinary • Vercel",
     link: "https://ecocharge-18a51.web.app/",
     id: 2,
     color: "text-gray-300",
@@ -249,10 +39,13 @@ const cards = [
   {
     url: require("../assets/artistly.png"),
     title: "Artistly",
-    description:
-      "Next.js portfolio platform with dynamic filters, dark mode, animation, and responsive design. Built with best practices and deployed on Vercel.",
-    tools:
-      "Next.js (App Router) • Tailwind CSS • Framer Motion • React Hook Form • Vercel",
+    description: [
+      "Engineered a responsive multi-page frontend application simulating a real-world booking platform with filterable artist listing system using reusable components",
+      "Implemented a multi-step onboarding form with validation (React Hook Form + Yup), supporting dropdowns, multi-select, and file upload",
+      "Optimized for frontend performance and mobile responsiveness, achieving 95+ Lighthouse scores",
+      "Deployed on Vercel with CI/CD pipeline for seamless updates and version control"
+    ],
+    tools: "Next.js (App Router) • Tailwind CSS • Framer Motion • React Hook Form • Vercel",
     link: "https://aartisttly.vercel.app/",
     id: 3,
     color: "text-gray-300",
@@ -295,7 +88,7 @@ const Projects = () => {
                     : 'text-gray-300 hover:text-yellow-300 hover:bg-gray-800/50'
                 }`}
               >
-                <span className="relative z-10">{card.title}</span>
+                <span className="relative z-10">{card.title.split(' – ')[0]}</span>
                 {selectedProject === index && (
                   <motion.div
                     layoutId="activeTab"
@@ -379,9 +172,16 @@ const Projects = () => {
                 {/* Description */}
                 <div className="mb-6">
                   <h4 className="text-yellow-300 font-helvetica text-md md:text-lg lg:text-xl tracking-wide mb-3 uppercase">About Project</h4>
-                  <p className="font-helvetica tracking-wide text-gray-300 text-sm md:text-md lg:text-lg leading-relaxed">
-                    {cards[selectedProject].description}
-                  </p>
+                  <ul className="space-y-2">
+                    {cards[selectedProject].description.map((point, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <span className="text-yellow-300 mt-1.5 text-xs">●</span>
+                        <p className="font-helvetica tracking-wide text-gray-300 text-sm md:text-md lg:text-lg leading-relaxed">
+                          {point}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Action Button */}

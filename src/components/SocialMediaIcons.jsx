@@ -6,18 +6,18 @@ const SocialMediaIcons = ({ className }) => {
     return (
         <div className={`flex justify-center md:justify-start my-10 gap-9 ${className}`}>
             <a
-                href="www.linkedin.com/in/nihalgavandi"
+                href="https://www.linkedin.com/in/nihalgavandi/"
                 target="_blank"
                 rel="noreferrer"
             >
-                <FaLinkedin size={17} />
+                <FaLinkedin size={24} />
             </a>
             <a
                 href="https://github.com/NIHHHHHHHHHHH"
                 target="_blank"
                 rel="noreferrer"
             >
-                <FaGithub size={17} />
+                <FaGithub size={24} />
             </a>
             
           
@@ -26,7 +26,7 @@ const SocialMediaIcons = ({ className }) => {
                 target="_blank"
                 rel="noreferrer"
             >
-                <MdEmail size={17} />
+                <MdEmail size={24} />
             </a>
         </div>
     )

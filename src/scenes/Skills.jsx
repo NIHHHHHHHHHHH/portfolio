@@ -1,20 +1,35 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaGithub, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiFirebase, SiMongodb, SiGooglecloud } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,  FaCloud, FaServer, FaPhp, FaWordpress,  } from 'react-icons/fa';
+import { SiTailwindcss,  SiMongodb, SiGooglecloud, SiNextdotjs, SiExpress, SiVercel, SiVite,  SiGoogle } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
+// --- UPDATED SKILLS ARRAY ---
 const skills = [
-    { name: 'HTML', icon: <FaHtml5 />, color: 'hover:text-orange-500' },
-    { name: 'CSS', icon: <FaCss3Alt />, color: 'hover:text-blue-500' },
+    // Frontend Development
+    { name: 'HTML5', icon: <FaHtml5 />, color: 'hover:text-orange-500' },
+    { name: 'CSS3', icon: <FaCss3Alt />, color: 'hover:text-blue-500' },
     { name: 'JavaScript', icon: <FaJs />, color: 'hover:text-yellow-400' },
-    { name: 'React', icon: <FaReact />, color: 'hover:text-cyan-400' },
+    { name: 'React.js', icon: <FaReact />, color: 'hover:text-cyan-400' },
+    { name: 'Next.js', icon: <SiNextdotjs />, color: 'hover:text-white' }, // Next.js is often black/white
     { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: 'hover:text-teal-400' },
+
+
+    // Backend Development
     { name: 'Node.js', icon: <FaNodeJs />, color: 'hover:text-green-500' },
-    { name: 'Git', icon: <FaGitAlt />, color: 'hover:text-orange-600' },
-    { name: 'GitHub', icon: <FaGithub />, color: 'hover:text-gray-400' },
-    { name: 'Python', icon: <FaPython />, color: 'hover:text-blue-400' },
-    { name: 'Firebase', icon: <SiFirebase />, color: 'hover:text-yellow-500' },
+    { name: 'Express.js', icon: <SiExpress />, color: 'hover:text-gray-400' }, // Using gray/dark for Express
+    { name: 'RESTful APIs', icon: <FaServer />, color: 'hover:text-red-500' },
     { name: 'MongoDB', icon: <SiMongodb />, color: 'hover:text-green-400' },
+    { name: 'PHP', icon: <FaPhp />, color: 'hover:text-indigo-400' },
+    { name: 'WordPress', icon: <FaWordpress />, color: 'hover:text-blue-600' },
+
+    // Tools & Technologies
+    { name: 'Git', icon: <FaGitAlt />, color: 'hover:text-orange-600' },
+    { name: 'Vite', icon: <SiVite />, color: 'hover:text-purple-500' },
+    { name: 'Vercel', icon: <SiVercel />, color: 'hover:text-white' },
     { name: 'GCP', icon: <SiGooglecloud />, color: 'hover:text-blue-500' },
+    { name: 'Cloudinary', icon: <FaCloud />, color: 'hover:text-cyan-600' },
+
+    // AI & Emerging Tech
+    { name: 'Google Gemini AI', icon: <SiGoogle />, color: 'hover:text-red-600' },
 ];
 
 const Skills = () => {
@@ -31,8 +46,7 @@ const Skills = () => {
                 <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-helvetica tracking-wide text-yellow-300 mb-4">
                     SKILLS
                 </p>
-                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-transparent"></div>
-                
+                <div className="w-24 h-1 bg-gradient-to-r from-yellow-300 to-transparent"></div>
             </motion.div>
 
             {/* Skills Grid */}
@@ -45,7 +59,7 @@ const Skills = () => {
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ 
                             duration: 0.5, 
-                            delay: index * 0.1,
+                            delay: index * 0.05, // Reduced delay for faster animation with more skills
                             type: "spring",
                             stiffness: 100
                         }}
