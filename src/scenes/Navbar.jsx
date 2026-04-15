@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import resume from "../assets/ResumewithPiic.pdf";
 import HamburgerButton from "../components/HamburgerButton";
 
+
 const Link = ({ page, setSelectedPage, onClick, isMobile = false }) => {
     const lowerCasePage = page.toLowerCase();
     return (
@@ -15,10 +16,10 @@ const Link = ({ page, setSelectedPage, onClick, isMobile = false }) => {
                     : "text-base lg:text-lg xl:text-xl"
             }`}
             href={`#${lowerCasePage}`}
-            offset={() => 100}
+            offset={100}
             onClick={(e) => {
-                setSelectedPage(lowerCasePage);
                 if (onClick) onClick(e);
+                setSelectedPage(lowerCasePage);
             }}
         >
             {page}
@@ -76,9 +77,15 @@ const Navbar = ({ setSelectedPage }) => {
         setIsMenuToggled(prev => !prev);
     };
 
-    const handleLinkClick = () => {
-        setIsMenuToggled(false);
-    };
+   const handleLinkClick = (e) => {
+    // First, re-enable body scroll immediately
+    document.body.style.overflow = "";
+    document.body.style.position = "";
+    document.body.style.width = "";
+    
+    // Then close the menu
+    setIsMenuToggled(false);
+};
 
     const handleOverlayClick = (e) => {
         // Only close if clicking the overlay, not the menu content
@@ -157,42 +164,48 @@ const Navbar = ({ setSelectedPage }) => {
                     
                     {/* Menu Content */}
                     <div className="relative z-50 h-full flex flex-col justify-center items-center px-4">
-                        <div 
-                            className={`flex flex-col gap-6 sm:gap-8 text-center font-helvetica tracking-wide w-full max-w-sm transform transition-all duration-300 ease-out ${
-                                isMenuToggled 
-                                    ? "translate-y-0 opacity-100 scale-100" 
-                                    : "translate-y-8 opacity-0 scale-95"
-                            }`}
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <Link
-                                page="Projects"
-                                setSelectedPage={setSelectedPage}
-                                onClick={handleLinkClick}
-                                isMobile={true}
-                            />
-                            <Link
-                                page="Education"
-                                setSelectedPage={setSelectedPage}
-                                onClick={handleLinkClick}
-                                isMobile={true}
-                            />
-                            <Link
-                                page="Skills"
-                                setSelectedPage={setSelectedPage}
-                                onClick={handleLinkClick}
-                                isMobile={true}
-                            />
-                            <a 
-                                href={resume} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
-                                className="hover:text-yellow-300 transition-colors duration-300 text-2xl sm:text-3xl py-3 block w-full text-center"
-                                onClick={handleLinkClick}
-                            >
-                                Resume
-                            </a>
-                        </div>
+                         <div 
+                               className={`flex flex-col gap-6 sm:gap-8 text-center font-helvetica tracking-wide w-full max-w-sm transform transition-all duration-300 ease-out ${
+                                   isMenuToggled 
+                                       ? "translate-y-0 opacity-100 scale-100" 
+                                       : "translate-y-8 opacity-0 scale-95"
+                               }`}
+                               onClick={(e) => e.stopPropagation()}
+                           >
+                               <Link
+                                   page="Projects"
+                                   setSelectedPage={setSelectedPage}
+                                   onClick={handleLinkClick}
+                                   isMobile={true}
+                               />
+                               <Link
+                                   page="Experience"
+                                   setSelectedPage={setSelectedPage}
+                                   onClick={handleLinkClick}
+                                   isMobile={true}
+                               />
+                               <Link
+                                   page="Skills"
+                                   setSelectedPage={setSelectedPage}
+                                   onClick={handleLinkClick}
+                                   isMobile={true}
+                               />
+                               <Link
+                                   page="Education"
+                                   setSelectedPage={setSelectedPage}
+                                   onClick={handleLinkClick}
+                                   isMobile={true}
+                               />
+                               <a 
+                                   href={resume} 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   className="hover:text-yellow-300 transition-colors duration-300 text-2xl sm:text-3xl py-3 block w-full text-center"
+                                   onClick={handleLinkClick}
+                               >
+                                   Resume
+                               </a>
+                           </div>
                         
                         {/* Close instruction */}
                         <p className="absolute bottom-8 text-sm text-gray-400 font-helvetica tracking-wide animate-pulse">

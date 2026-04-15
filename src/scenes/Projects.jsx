@@ -20,39 +20,57 @@ const cards = [
     gradient: "from-blue-600/20 to-purple-600/20"
   },
   {
-    url: require("../assets/smartsearch.png"),
-    title: "Smart Search ",
+    url: require("../assets/scalence.png"),
+    title: "Scalence Academy",
     description: [
-      "Developed an AI-powered internal search system with hybrid search logic combining keyword matching (60%) and semantic similarity (40%) using Gemini embeddings for highly relevant results",
-      "Built intelligent auto-categorization pipeline using Gemini AI and enabled multi-format ingestion with text extraction for PDF, DOCX, TXT, and Markdown files",
-      "Integrated Cloudinary for scalable CDN-optimized file storage and designed a fast, responsive UI with advanced filters and real-time upload feedback (5-15 seconds)",
-      "Deployed production-ready full stack using Vercel (frontend + backend), MongoDB Atlas, and engineered robust backend with Node.js, Express, and Multer"
+      "Developed a unique coaching institute landing page with a results-first scoreboard instead of a traditional hero section",
+      "Built interactive exam selector that dynamically filters courses and faculty using React state management",
+      "Implemented animated daily timeline, testimonial toggle for students and parents, and visual seat availability grid",
+      "Integrated WhatsApp enrollment form with validation and ensured full responsiveness without using external state libraries"
     ],
-    tools: "React.js • Tailwind CSS • Nodejs • Gemini Ai • Cloudinary • Vercel",
-    link: "https://smart-search-m7v6-frontend.vercel.app/",
+    tools: "Next.js • React.js • Tailwind CSS • Framer Motion • React Icons • Google Fonts",
+    link: "https://scalence-academy.vercel.app/",
     id: 2,
-    color: "text-gray-300",
-    shadow: "yes",
-    category: "Full-Stack",
-    gradient: "from-green-600/20 to-teal-600/20"
-  },
-  {
-    url: require("../assets/artistly.png"),
-    title: "Artistly",
-    description: [
-      "Engineered a responsive multi-page frontend application simulating a real-world booking platform with filterable artist listing system using reusable components",
-      "Implemented a multi-step onboarding form with validation (React Hook Form + Yup), supporting dropdowns, multi-select, and file upload",
-      "Optimized for frontend performance and mobile responsiveness, achieving 95+ Lighthouse scores",
-      "Deployed on Vercel with CI/CD pipeline for seamless updates and version control"
-    ],
-    tools: "Next.js (App Router) • Tailwind CSS • Framer Motion • React Hook Form • Vercel",
-    link: "https://aartisttly.vercel.app/",
-    id: 3,
     color: "text-gray-300",
     shadow: "yes",
     category: "Frontend",
     gradient: "from-purple-600/20 to-pink-600/20"
-  },
+},
+{
+    url: require("../assets/dum-chronicles.png"),
+    title: "Dum Chronicles",
+    description: [
+      "Designed a premium dark-themed restaurant landing page with cinematic fullscreen hero and smooth slow-zoom animation",
+      "Developed tab-based dynamic menu with multiple categories and dishes for an engaging browsing experience",
+      "Created speciality sections, masonry ambience gallery, and editorial-style testimonials for a luxury brand feel",
+      "Integrated reservation form with WhatsApp redirect and built a fully responsive layout with elegant UI interactions"
+    ],
+    tools: "Next.js • React.js • Tailwind CSS • Framer Motion • React Icons • Google Fonts",
+    link: "https://dum-chronicles.vercel.app",
+    id: 3,
+    color: "text-gray-300",
+    shadow: "yes",
+    category: "Frontend",
+    gradient: "from-orange-600/20 to-yellow-600/20"
+},
+ {
+  url: require("../assets/dr-sharma.png"),
+     title: "Dr. Sharma's Clinic",
+     description: [
+       "Built a professional clinic landing page using Next.js 15 and Tailwind CSS v4 with a clean, conversion-focused UI",
+       "Implemented sticky navbar, animated hero section, services grid, about section, and appointment booking form with validation",
+       "Integrated Google Maps embed and WhatsApp floating button for quick patient communication and improved engagement",
+       "Structured all content in a single data file for easy updates and ensured full responsiveness across mobile, tablet, and desktop"
+     ],
+     tools: "Next.js • React.js • Tailwind CSS • Framer Motion • React Icons • Google Fonts",
+     link: "https://dr-sharma-clinic.vercel.app",
+     id: 4,
+     color: "text-gray-300",
+     shadow: "yes",
+     category: "Frontend",
+     gradient: "from-blue-600/20 to-cyan-600/20"
+},
+
 ];
 
 const Projects = () => {

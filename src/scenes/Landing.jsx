@@ -18,17 +18,13 @@ const Landing = ({ setSelectedPage }) => {
                     {/* STATIC JOB TITLE */}
                     <div className="mt-6 md:mt-8 lg:mt-10">
                         <h1 className="font-helvetica tracking-wide text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white">
-                            Full Stack Developer
+                            Frontend Developer
                         </h1>
                     </div>
 
                     {/* NEW PROFESSIONAL SUMMARY */}
                    <p className="mt-6 md:mt-8 lg:mt-10 font-helvetica tracking-wide text-sm sm:text-base md:text-lg lg:text-xl text-lightgrey leading-relaxed max-w-3xl text-justify">
-                     Full Stack Web Developer with hands-on experience in building scalable web applications using the MERN stack, 
-                     React, Next.js, and WordPress. Successfully completed a Software Associate Internship, deploying production-ready
-                     applications on Google Cloud Platform. Skilled in leveraging AI tools like ChatGPT-4 and Google Gemini for
-                     problem-solving and optimization. Passionate about creating high-performance, user-friendly interfaces
-                     and staying current with latest web development trends.
+                    Frontend developer specializing in Next.js, React, and Tailwind CSS with passion for bleeding-edge technologies and craft-focused development. Experienced in building modern web applications using Next.js 15 App Router, shadcn/ui, Framer Motion, and design systems. Detail-oriented developer who values creating unique, high-quality solutions with clean architecture and pixel-perfect implementations.
                     </p>
                 </div>
 
