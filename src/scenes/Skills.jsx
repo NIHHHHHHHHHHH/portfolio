@@ -1,25 +1,24 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,  FaCloud, FaServer, FaPhp, FaWordpress,  } from 'react-icons/fa';
-import { SiTailwindcss,  SiMongodb, SiGooglecloud, SiNextdotjs, SiExpress, SiVercel, SiVite,  SiGoogle } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,  FaCloud, FaServer,  } from 'react-icons/fa';
+import { SiTailwindcss,  SiMongodb, SiGooglecloud, SiNextdotjs, SiExpress, SiVercel, SiVite, } from 'react-icons/si';
+import { TbBrandFramerMotion } from "react-icons/tb";
 import { motion } from 'framer-motion';
 
-// --- UPDATED SKILLS ARRAY ---
+
 const skills = [
     // Frontend Development
     { name: 'HTML5', icon: <FaHtml5 />, color: 'hover:text-orange-500' },
     { name: 'CSS3', icon: <FaCss3Alt />, color: 'hover:text-blue-500' },
     { name: 'JavaScript', icon: <FaJs />, color: 'hover:text-yellow-400' },
     { name: 'React.js', icon: <FaReact />, color: 'hover:text-cyan-400' },
-    { name: 'Next.js', icon: <SiNextdotjs />, color: 'hover:text-white' }, // Next.js is often black/white
+    { name: 'Next.js', icon: <SiNextdotjs />, color: 'hover:text-white' }, 
     { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: 'hover:text-teal-400' },
-
+     { name: 'Framer Motion', icon: <TbBrandFramerMotion />, color: 'hover:text-teal-400' },
 
     // Backend Development
     { name: 'Node.js', icon: <FaNodeJs />, color: 'hover:text-green-500' },
-    { name: 'Express.js', icon: <SiExpress />, color: 'hover:text-gray-400' }, // Using gray/dark for Express
+    { name: 'Express.js', icon: <SiExpress />, color: 'hover:text-gray-400' }, 
     { name: 'RESTful APIs', icon: <FaServer />, color: 'hover:text-red-500' },
     { name: 'MongoDB', icon: <SiMongodb />, color: 'hover:text-green-400' },
-    { name: 'PHP', icon: <FaPhp />, color: 'hover:text-indigo-400' },
-    { name: 'WordPress', icon: <FaWordpress />, color: 'hover:text-blue-600' },
 
     // Tools & Technologies
     { name: 'Git', icon: <FaGitAlt />, color: 'hover:text-orange-600' },
@@ -27,9 +26,6 @@ const skills = [
     { name: 'Vercel', icon: <SiVercel />, color: 'hover:text-white' },
     { name: 'GCP', icon: <SiGooglecloud />, color: 'hover:text-blue-500' },
     { name: 'Cloudinary', icon: <FaCloud />, color: 'hover:text-cyan-600' },
-
-    // AI & Emerging Tech
-    { name: 'Google Gemini AI', icon: <SiGoogle />, color: 'hover:text-red-600' },
 ];
 
 const Skills = () => {

@@ -1,4 +1,4 @@
-import resume from "../assets/ResumewithPiic.pdf";
+import resume from "../assets/frontenddeveloper.pdf";
 import { GoArrowUpRight } from "react-icons/go";
 
 const Landing = ({ setSelectedPage }) => {
