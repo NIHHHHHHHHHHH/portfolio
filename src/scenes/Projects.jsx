@@ -94,30 +94,34 @@ const Projects = () => {
         </motion.div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center mb-8">
-          <div className="flex gap-2 bg-gray-900/50 backdrop-blur-md rounded-xl p-2 border border-gray-700/50 shadow-2xl">
-            {cards.map((card, index) => (
-              <button
-                key={card.id}
-                onClick={() => setSelectedProject(index)}
-                className={`px-6 py-3 rounded-lg text-sm font-helvetica tracking-wide transition-all duration-300 relative overflow-hidden ${
-                  selectedProject === index 
-                    ? 'bg-gradient-to-r from-yellow-400 to-yellow-300 text-black shadow-lg' 
-                    : 'text-gray-300 hover:text-yellow-300 hover:bg-gray-800/50'
-                }`}
-              >
-                <span className="relative z-10">{card.title.split(' – ')[0]}</span>
-                {selectedProject === index && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-300"
-                    transition={{ type: "spring", duration: 0.6 }}
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
+        {/* Navigation Buttons */}
+<div className="flex justify-center mb-8">
+  {/* Mobile: 2x2 grid | Desktop: single row */}
+  <div className="grid grid-cols-2 md:flex gap-2 bg-gray-900/50 backdrop-blur-md rounded-xl p-2 border border-gray-700/50 shadow-2xl w-full md:w-auto">
+    {cards.map((card, index) => (
+      <button
+        key={card.id}
+        onClick={() => setSelectedProject(index)}
+        className={`px-4 py-3 md:px-6 md:py-3 rounded-lg text-xs md:text-sm font-helvetica tracking-wide transition-all duration-300 relative overflow-hidden w-full md:w-auto ${
+          selectedProject === index
+            ? 'bg-gradient-to-r from-yellow-400 to-yellow-300 text-black shadow-lg'
+            : 'text-gray-300 hover:text-yellow-300 hover:bg-gray-800/50'
+        }`}
+      >
+        <span className="relative z-10 block truncate text-center">
+          {card.title.split(' – ')[0]}
+        </span>
+        {selectedProject === index && (
+          <motion.div
+            layoutId="activeTab"
+            className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-300"
+            transition={{ type: "spring", duration: 0.6 }}
+          />
+        )}
+      </button>
+    ))}
+  </div>
+</div>
 
         {/* Single Project Display */}
         <div className="w-full max-w-5xl mx-auto">
