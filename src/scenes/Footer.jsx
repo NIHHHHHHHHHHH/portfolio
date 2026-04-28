@@ -18,7 +18,7 @@ const Footer = () => {
                     {/* Copyright */}
                     <div className="order-2 sm:order-1">
                         <p className="font-helvetica text-sm sm:text-base md:text-lg text-lightgrey text-center sm:text-left tracking-wide">
-                            NIHHHHHH © 2024
+                            NIHHHHHH © 2026
                         </p>
                     </div>
 
